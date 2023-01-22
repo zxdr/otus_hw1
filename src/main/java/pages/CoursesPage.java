@@ -2,9 +2,9 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 
-public class Courses extends BasePage<Courses> {
+public class CoursesPage extends BasePage<CoursesPage> {
 
-    public Courses(WebDriver driver) {
+    public CoursesPage(WebDriver driver) {
         super(driver);
     }
 

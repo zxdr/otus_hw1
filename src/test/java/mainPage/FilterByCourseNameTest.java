@@ -17,7 +17,7 @@ public class FilterByCourseNameTest {
     private WebDriver driver;
 
     @Test
-    public void assertCourseNameInFilter() {
+    public void assertCourseNameAfterFilterByName() {
 
         new MainPage(driver)
                 .open();
@@ -27,4 +27,18 @@ public class FilterByCourseNameTest {
 
         Assertions.assertEquals("Курс Team Lead", pageTitle);
     }
+
+    // test is not correct, fix later, add test on latest course
+    @Test
+    public void assertTheEarliestCourseAfterFilterByDateOfStart() {
+
+        new MainPage(driver)
+                .open();
+
+        String pageTitle = new FavoriteCoursesComponent(driver)
+                .clickCourseItemTheEarliest().getPageTitle();
+
+        Assertions.assertEquals("Курс Team Lead", pageTitle);
+    }
+
 }
